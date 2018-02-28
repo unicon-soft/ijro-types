@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 class Db {
-    constructor(params) {
+    constructor(params = {}) {
         const { id, name_ru, name_uz, text, short_name_ru, short_name_uz, address, phone } = params;
         this.id = id;
         this.name_ru = name_ru;

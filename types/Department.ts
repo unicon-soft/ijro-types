@@ -4,7 +4,7 @@ export class Department {
     name_uz: string;
     parent_id: string;
 
-    constructor(params) {
+    constructor(params: any = {}) {
         const {id, name_ru, name_uz, text, parent_id} = params;
         this.id = id;
         this.name_ru = name_ru;

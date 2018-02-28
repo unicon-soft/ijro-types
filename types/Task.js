@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const DBRecipient_1 = require("./DBRecipient");
 class Task {
-    constructor(params) {
+    constructor(params = {}) {
         this.db_recipients = [];
         const { id, type, document_id, parent_id, expired_tasks, task_done, task_done_at, db_recipients } = params;
         this.id = id;

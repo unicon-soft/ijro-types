@@ -5,7 +5,7 @@ export class RootTask {
     document_recipient_reg_number: string;
 
 
-    constructor(params) {
+    constructor(params: any = {}) {
         const {document_sender_reg_date, document_sender_reg_number, document_recipient_reg_date, document_recipient_reg_number} = params;
         this.document_sender_reg_date = document_sender_reg_date;
         this.document_sender_reg_number = document_sender_reg_number;

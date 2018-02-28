@@ -12,7 +12,7 @@ export class DBRecipient {
   details: any;
   recipient: Db;
 
-  constructor(params) {
+  constructor(params: any = {}) {
     const {id, type, parent_id, is_deleted, task_done, task_done_at, main, details, recipient} = params;
     const {id: recipient_db_id} = recipient;
     this.id = id;

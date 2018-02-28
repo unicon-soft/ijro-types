@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const Task_1 = require("./Task");
 class TaskControlPlan {
-    constructor(params) {
+    constructor(params = {}) {
         const { id, document_id, due_date, content, type, task_done, task_done_at, details, task } = params;
         this.id = id;
         this.document_id = document_id;
