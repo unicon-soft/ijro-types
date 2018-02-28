@@ -1,6 +1,6 @@
 {
-  "name": "ijro-types",
-  "version": "1.0.0",
+  "name": "@unicon/ijro-types",
+  "version": "0.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
