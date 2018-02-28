@@ -6,3 +6,5 @@ export {DBRecipient} from "./types/DBRecipient"
 
 
 export {TaskTypeEnum} from "./types/task/TaskTypEnum"
+export {TaskListByRecipientUserRequest} from "./types/TaskListByRecipientUserRequest"
+export {TaskListByRecipientUser} from "./types/TaskListByRecipientUserResponse"
