@@ -7,7 +7,7 @@ export class User {
     user_name: string;
     short_user_name: string;
 
-    constructor(params) {
+    constructor(params: any = {}) {
         const {id, file_id, middle_name, last_name, first_name, user_name, short_user_name} = params;
         this.id = id;
         this.file_id = file_id;

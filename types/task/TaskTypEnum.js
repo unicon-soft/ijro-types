@@ -1,0 +1,28 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var TaskTypeEnum;
+(function (TaskTypeEnum) {
+    TaskTypeEnum["DOCUMENT_POINT"] = "DOCUMENT_POINT";
+    TaskTypeEnum["DONE_REQUEST"] = "DONE_REQUEST";
+    TaskTypeEnum["DONE_RESPONSE"] = "DONE_RESPONSE";
+    TaskTypeEnum["FOR_AGREE"] = "FOR_AGREE";
+    TaskTypeEnum["FOR_APPROVAL"] = "FOR_APPROVAL";
+    TaskTypeEnum["FOR_CONSIDERATION"] = "FOR_CONSIDERATION";
+    TaskTypeEnum["FOR_CONTROL"] = "FOR_CONTROL";
+    TaskTypeEnum["FOR_EXECUTION"] = "FOR_EXECUTION";
+    TaskTypeEnum["FOR_INFORMATION"] = "FOR_INFORMATION";
+    TaskTypeEnum["FOR_MOVE"] = "FOR_MOVE";
+    TaskTypeEnum["FOR_PERSONAL"] = "FOR_PERSONAL";
+    TaskTypeEnum["FOR_REASSIGN"] = "FOR_REASSIGN";
+    TaskTypeEnum["FOR_REGISTER"] = "FOR_REGISTER";
+    TaskTypeEnum["FOR_RESOLUTION"] = "FOR_RESOLUTION";
+    TaskTypeEnum["FOR_SIGN"] = "FOR_SIGN";
+    TaskTypeEnum["RECIPIENT"] = "RECIPIENT";
+    TaskTypeEnum["ROOT_TASK"] = "ROOT_TASK";
+    TaskTypeEnum["SENDER"] = "SENDER";
+    TaskTypeEnum["SEND_DOCUMENT"] = "SEND_DOCUMENT";
+    TaskTypeEnum["TRANSFER_TASK_REQUEST"] = "TRANSFER_TASK_REQUEST";
+    TaskTypeEnum["TRANSFER_TASK_RESPONSE"] = "TRANSFER_TASK_RESPONSE";
+    TaskTypeEnum["CONTROL_PLAN"] = "CONTROL_PLAN";
+    TaskTypeEnum["CHANGE_DUE_DATE"] = "CHANGE_DUE_DATE";
+})(TaskTypeEnum = exports.TaskTypeEnum || (exports.TaskTypeEnum = {}));

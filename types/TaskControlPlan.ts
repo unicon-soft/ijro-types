@@ -11,7 +11,7 @@ export class TaskControlPlan {
   details: any;
   task: Task;
 
-  constructor(params) {
+  constructor(params: any = {}) {
     const {id, document_id, due_date, content, type, task_done, task_done_at, details, task} = params;
     this.id = id;
     this.document_id = document_id;

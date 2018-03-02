@@ -10,7 +10,7 @@ export class Task {
   task_done_at: string;
   db_recipients: DBRecipient[] = [];
 
-  constructor(params) {
+  constructor(params: any = {}) {
     const {id, type, document_id, parent_id, expired_tasks, task_done, task_done_at, db_recipients} = params;
     this.id = id;
     this.document_id = document_id;
