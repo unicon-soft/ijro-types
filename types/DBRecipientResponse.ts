@@ -22,7 +22,9 @@ export class DBRecipientResponse {
         this.read = read;
         this.last_name = last_name;
         this.middle_name = middle_name;
-        attachments.forEach(f => this.attachments.push(new TaskFiles(attachments)))
+        if (attachments && Array.isArray(attachments)) {
+            attachments.forEach(f => this.attachments.push(new TaskFiles(f)))
+        }
     }
 }
 
