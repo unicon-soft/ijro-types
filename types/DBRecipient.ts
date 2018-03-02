@@ -1,4 +1,5 @@
 import {Db} from "./Db";
+import {DBRecipientResponse} from "./DBRecipientResponse";
 
 export class DBRecipient {
   id: string;
@@ -11,9 +12,10 @@ export class DBRecipient {
   main: boolean;
   details: any;
   recipient: Db;
+  response: DBRecipientResponse[] = [];
 
   constructor(params) {
-    const {id, type, parent_id, is_deleted, task_done, task_done_at, main, details, recipient} = params;
+    const {id, type, parent_id, is_deleted, task_done, task_done_at, main, details, recipient, response} = params;
     const {id: recipient_db_id} = recipient;
     this.id = id;
     this.recipient_db_id = recipient_db_id;
@@ -25,6 +27,7 @@ export class DBRecipient {
     this.main = main;
     this.details = details;
     this.recipient = new Db(recipient);
+    response.forEach(r =>  this.response.push(new DBRecipientResponse(r)));
   }
 }
 
