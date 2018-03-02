@@ -10,9 +10,10 @@ export class DBRecipientResponse {
     middle_name: string;
 
     constructor(params: any = {}) {
-        const {id, created_at, sender_user_id, type, read, first_name, last_name, middle_name} = params;
+        const {id, content, created_at, sender_user_id, type, read, first_name, last_name, middle_name} = params;
         this.id = id;
         this.type = type;
+        this.content = content;
         this.created_at = created_at;
         this.sender_user_id = sender_user_id;
         this.first_name = first_name;
