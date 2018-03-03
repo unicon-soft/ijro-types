@@ -33,10 +33,14 @@ export class DBRecipient {
     this.details = details;
     this.recipient = new Db(recipient);
     this.accepted_by = new User(accepted_by);
-    response.forEach(r =>  this.response.push(new DBRecipientResponse(r)));
+    response.forEach(r =>  {
+      if (r.id) {
+        this.response.push(new DBRecipientResponse(r));
+      }
+    });
     additional.forEach(r => {
         if (r.id) {
-            this.additional.push(new TaskResponseAdditional(r));
+          this.additional.push(new TaskResponseAdditional(r));
         }
     })
   }

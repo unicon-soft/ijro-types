@@ -21,7 +21,11 @@ class DBRecipient {
         this.details = details;
         this.recipient = new Db_1.Db(recipient);
         this.accepted_by = new User_1.User(accepted_by);
-        response.forEach(r => this.response.push(new DBRecipientResponse_1.DBRecipientResponse(r)));
+        response.forEach(r => {
+            if (r.id) {
+                this.response.push(new DBRecipientResponse_1.DBRecipientResponse(r));
+            }
+        });
         additional.forEach(r => {
             if (r.id) {
                 this.additional.push(new TaskResponseAdditional_1.TaskResponseAdditional(r));
