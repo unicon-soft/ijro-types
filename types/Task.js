@@ -12,7 +12,6 @@ class Task {
         this.type = type;
         this.task_done = task_done;
         this.task_done_at = task_done_at;
-        console.log('db_recipients', db_recipients);
         db_recipients.forEach(recipient => {
             this.db_recipients.push(new DBRecipient_1.DBRecipient(recipient));
         });
