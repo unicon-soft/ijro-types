@@ -8,7 +8,6 @@ export class TaskResponseAdditional {
         this.id = id;
         this.content = content;
         this.created_at = created_at;
-
     }
 }
 
