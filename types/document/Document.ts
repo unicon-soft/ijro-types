@@ -30,9 +30,9 @@ export class Document {
         this.details = details;
         this.category = category;
         this.created_by = created_by;
-        this.created_by_user = new User(created_by);
+        this.created_by_user = new User(created_by_user);
         this.signed_by = signed_by;
-        this.signed_by_user = new User(signed_by);
+        this.signed_by_user = new User(signed_by_user);
         this.created_at = created_at;
         if (files && Array.isArray(files) && files.length > 0) {
             files.forEach(f =>  this.files.push(new File(f)));
