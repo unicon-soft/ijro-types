@@ -22,3 +22,7 @@ var User_1 = require("./types/User");
 exports.User = User_1.User;
 var Department_1 = require("./types/Department");
 exports.Department = Department_1.Department;
+var Document_1 = require("./types/document/Document");
+exports.Document = Document_1.Document;
+var DocumentPoint_1 = require("./types/document/DocumentPoint");
+exports.DocumentPoint = DocumentPoint_1.DocumentPoint;
