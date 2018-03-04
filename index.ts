@@ -12,3 +12,4 @@ export {User} from './types/User';
 export {Department} from './types/Department';
 export {Document} from './types/document/Document';
 export {DocumentPoint} from './types/document/DocumentPoint';
+export {File} from './types/File';
