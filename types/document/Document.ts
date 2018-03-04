@@ -2,6 +2,7 @@ import {User} from "../User";
 import {File} from "../File";
 import {Db} from "../Db";
 import {DocumentPoint} from "./DocumentPoint";
+import {TaskResolution} from "../task/TaskResolution";
 
 export class Document {
     id: string;
@@ -16,9 +17,9 @@ export class Document {
     created_at: string;
     files: File[] = [];
     points: DocumentPoint[] = [];
-
+    resolutions: TaskResolution[] = [];
     constructor(params: any = {}) {
-        const {id, db_id, db, type_id, brief_content, details, category, created_by, signed_by, created_at, files, points} = params;
+        const {id, db_id, db, type_id, brief_content, details, category, created_by, signed_by, created_at, files, points, resolutions} = params;
         this.id = id;
         this.db_id = db_id;
         this.db = new Db(db);
@@ -35,7 +36,9 @@ export class Document {
         if (points && Array.isArray(points) && points.length > 0) {
             points.forEach(p =>  this.points.push(new DocumentPoint(p)));
         }
-
+        if (resolutions && Array.isArray(resolutions) && resolutions.length > 0) {
+            resolutions.forEach(r => this.resolutions.push(new TaskResolution(r)));
+        }
     }
 }
 

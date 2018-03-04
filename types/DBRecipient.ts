@@ -18,7 +18,6 @@ export class DBRecipient {
   additional: TaskResponseAdditional[] = [];
   accepted_by: User;
 
-
   constructor(params) {
     const {id, type, parent_id, is_deleted, task_done, task_done_at, main, details, recipient, response, additional, accepted_by} = params;
     const {id: recipient_db_id} = recipient;
