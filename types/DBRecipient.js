@@ -21,16 +21,20 @@ class DBRecipient {
         this.details = details;
         this.recipient = new Db_1.Db(recipient);
         this.accepted_by = new User_1.User(accepted_by);
-        response.forEach(r => {
-            if (r.id) {
-                this.response.push(new DBRecipientResponse_1.DBRecipientResponse(r));
-            }
-        });
-        additional.forEach(r => {
-            if (r.id) {
-                this.additional.push(new TaskResponseAdditional_1.TaskResponseAdditional(r));
-            }
-        });
+        if (response && Array.isArray(response) && response.length > 0) {
+            response.forEach(r => {
+                if (r.id) {
+                    this.response.push(new DBRecipientResponse_1.DBRecipientResponse(r));
+                }
+            });
+        }
+        if (additional && Array.isArray(additional) && additional.length > 0) {
+            additional.forEach(r => {
+                if (r.id) {
+                    this.additional.push(new TaskResponseAdditional_1.TaskResponseAdditional(r));
+                }
+            });
+        }
     }
 }
 exports.DBRecipient = DBRecipient;

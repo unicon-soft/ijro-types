@@ -32,16 +32,21 @@ export class DBRecipient {
     this.details = details;
     this.recipient = new Db(recipient);
     this.accepted_by = new User(accepted_by);
-    response.forEach(r =>  {
-      if (r.id) {
-        this.response.push(new DBRecipientResponse(r));
-      }
-    });
-    additional.forEach(r => {
-        if (r.id) {
-          this.additional.push(new TaskResponseAdditional(r));
-        }
-    })
+    if (response && Array.isArray(response) && response.length > 0) {
+        response.forEach(r =>  {
+            if (r.id) {
+                this.response.push(new DBRecipientResponse(r));
+            }
+        });
+    }
+    if (additional && Array.isArray(additional) && additional.length > 0) {
+        additional.forEach(r => {
+            if (r.id) {
+                this.additional.push(new TaskResponseAdditional(r));
+            }
+        });
+    }
+
   }
 }
 
