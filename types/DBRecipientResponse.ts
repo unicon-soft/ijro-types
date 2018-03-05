@@ -24,7 +24,8 @@ export class DBRecipientResponse {
         this.middle_name = middle_name;
         if (attachments && Array.isArray(attachments) && attachments.length > 0) {
             attachments.forEach(f => {
-                if (f.id) {
+                console.log(f);
+                if (f.task_id) {
                     this.attachments.push(new TaskFiles(f));
                 }
             })
