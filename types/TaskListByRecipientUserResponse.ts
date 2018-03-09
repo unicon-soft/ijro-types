@@ -2,6 +2,7 @@ import {RootTask} from "./RootTask";
 import {User} from "./User";
 import {Db} from "./Db";
 import {Department} from "./Department";
+import {Document} from "./document/Document";
 
 export class TaskListByRecipientUserResponse {
     id: string;
@@ -35,10 +36,11 @@ export class TaskListByRecipientUserResponse {
     recipient_db: Db;
     recipient_department: Department;
     task_done_by_user: User;
+    document: Document;
     constructor(params: any = {}) {
         const {sender_department, recipient_department, task_done_by_user, id, created_at, document_id, parent_id, recipient_type, task_type, due_date, sender_user_id, recipient_user_id, content,
             main, sender_db_id, recipient_db_id, recipient_department_id, task_done, task_done_at,
-            task_done_by, read, read_time, details, accepted, rejected, root, sender_department_id, sender_user, recipient_user, sender_db, recipient_db} = params;
+            task_done_by, read, read_time, details, accepted, rejected, root, sender_department_id, sender_user, recipient_user, sender_db, recipient_db, document} = params;
         this.id = id;
         this.created_at = created_at;
         this.document_id = document_id;
@@ -70,6 +72,7 @@ export class TaskListByRecipientUserResponse {
         this.sender_department = new Department(sender_department);
         this.recipient_department = new Department(recipient_department);
         this.task_done_by_user = new User(task_done_by_user);
+        this.document = new Document(document)
     }
 }
 
