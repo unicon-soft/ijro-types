@@ -3,7 +3,7 @@ import {User} from "./User";
 import {Db} from "./Db";
 import {Department} from "./Department";
 
-export class TaskListByRecipientUser {
+export class TaskListByRecipientUserResponse {
     id: string;
     created_at: string;
     document_id: string;
