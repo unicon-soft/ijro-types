@@ -35,7 +35,6 @@ export class TaskListByRecipientUserResponse {
     recipient_db: Db;
     recipient_department: Department;
     task_done_by_user: User;
-
     constructor(params: any = {}) {
         const {sender_department, recipient_department, task_done_by_user, id, created_at, document_id, parent_id, recipient_type, task_type, due_date, sender_user_id, recipient_user_id, content,
             main, sender_db_id, recipient_db_id, recipient_department_id, task_done, task_done_at,
