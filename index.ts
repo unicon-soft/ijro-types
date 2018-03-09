@@ -13,3 +13,4 @@ export {Department} from './types/Department';
 export {Document} from './types/document/Document';
 export {DocumentPoint} from './types/document/DocumentPoint';
 export {File} from './types/File';
+export {IPaginationList} from './types/IPaginationList';
