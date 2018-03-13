@@ -28,3 +28,5 @@ var DocumentPoint_1 = require("./types/document/DocumentPoint");
 exports.DocumentPoint = DocumentPoint_1.DocumentPoint;
 var File_1 = require("./types/File");
 exports.File = File_1.File;
+var TaskById_1 = require("./types/task/TaskById");
+exports.TaskById = TaskById_1.TaskById;
