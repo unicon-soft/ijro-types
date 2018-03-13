@@ -1,4 +1,4 @@
-export class TaskById {
+export class TaskByIdRequest {
     recipient_id: string;
     db_id: string;
     document_id: string;

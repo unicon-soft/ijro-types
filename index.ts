@@ -17,3 +17,5 @@ export {DocumentPoint} from './types/document/DocumentPoint';
 export {File} from './types/File';
 export {IPaginationList} from './types/IPaginationList';
 export {TaskById} from './types/task/TaskById'
+export {TaskByIdRequest} from './types/task/TaskByIdRequest'
+

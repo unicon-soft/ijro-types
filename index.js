@@ -30,3 +30,5 @@ var File_1 = require("./types/File");
 exports.File = File_1.File;
 var TaskById_1 = require("./types/task/TaskById");
 exports.TaskById = TaskById_1.TaskById;
+var TaskByIdRequest_1 = require("./types/task/TaskByIdRequest");
+exports.TaskByIdRequest = TaskByIdRequest_1.TaskByIdRequest;
