@@ -8,7 +8,7 @@ class Recipient {
     constructor(params) {
         this.response = [];
         this.additional = [];
-        const { id, type, parent_id, is_deleted, task_done, recipient_db_id, task_done_at, main, details, recipient_db, recipient_user, response, additional, accepted_by } = params;
+        const { id, type, parent_id, is_deleted, task_done, recipient_db_id, task_done_at, main, details, recipient_db = {}, recipient_user = {}, response, additional, accepted_by = {} } = params;
         this.id = id;
         this.recipient_db_id = recipient_db_id;
         this.type = type;

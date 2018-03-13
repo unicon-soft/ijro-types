@@ -5,7 +5,7 @@ const Recipient_1 = require("./Recipient");
 class TaskById {
     constructor(params = {}) {
         this.recipients = [];
-        const { recipient_id, content, due_date, parent_id, recipients, created_by, created_at, type, task_done, task_done_by, task_done_at, sender_user } = params;
+        const { recipient_id, content, due_date, parent_id, recipients, created_by = {}, created_at, type, task_done, task_done_by = {}, task_done_at = {}, sender_user = {} } = params;
         this.recipient_id = recipient_id;
         this.content = content;
         this.parent_id = parent_id;
