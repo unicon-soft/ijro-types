@@ -34,16 +34,20 @@ export class Recipient {
         this.recipient_db = new Db(recipient_db);
         this.recipient_user = new User(recipient_user);
         this.accepted_by = new User(accepted_by);
-        response.forEach(r =>  {
-            if (r.id) {
-                this.response.push(new DBRecipientResponse(r));
-            }
-        });
-        additional.forEach(r => {
-            if (r.id) {
-                this.additional.push(new TaskResponseAdditional(r));
-            }
-        })
+        if (response && Array.isArray(response) && response.length > 0) {
+            response.forEach(r => {
+                if (r.id) {
+                    this.response.push(new DBRecipientResponse(r));
+                }
+            });
+        }
+        if (additional && Array.isArray(additional) && additional.length > 0) {
+            additional.forEach(r => {
+                if (r.id) {
+                    this.additional.push(new TaskResponseAdditional(r));
+                }
+            })
+        }
     }
 }
 
